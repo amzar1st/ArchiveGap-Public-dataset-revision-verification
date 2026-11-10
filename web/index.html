@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Compare public dataset releases and inspect their finalized GenLayer disclosure audits.">
+<title>ArchiveGap · Public dataset revision verification</title>
+<link rel="icon" href="./mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.js"></script>
+</head>
+<body>
+<header><div class="shell bar"><a class="brand" href="./"><img src="./mark.svg" width="33" height="33" alt="">ArchiveGap</a><nav aria-label="Project links"><a id="repo">Source ↗</a><a id="contract">Contract ↗</a></nav></div></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">PUBLIC DATASET REVISION VERIFICATION</p><h1>Same column.<br><em>Different meaning.</em></h1><p>See exactly what changed between two pinned releases, then read the finalized GenLayer decision on whether the publisher disclosed it.</p><div class="actions"><button id="gap-demo">Load air-quality demo</button><button id="disclosed-demo" class="secondary">Compare disclosed case</button></div><p class="hint">Fictional Harbor City data · Live Studionet records · No wallet needed to read</p></section>
+<section class="card" aria-labelledby="report-heading"><p class="eyebrow">01 / FINALIZED RECORD</p><h2 id="report-heading">Disclosure audit</h2><p id="report-status" role="status">Choose a demo or enter three evidence files.</p><div id="report"></div></section>
+<section class="card" aria-labelledby="inputs-heading"><p class="eyebrow">02 / EVIDENCE INPUTS</p><h2 id="inputs-heading">Audit a release pair</h2><p>Enter three commit-pinned GitHub JSON URLs from the publisher’s repository and their SHA-256 checksums.</p><form id="evidence">
+<div class="inputs"><label>Earlier release URL<input id="before_url" required type="url" maxlength="300"></label><label>Earlier release SHA-256<input id="before_sha" required pattern="[0-9a-f]{64}" maxlength="64"></label>
+<label>Updated release URL<input id="after_url" required type="url" maxlength="300"></label><label>Updated release SHA-256<input id="after_sha" required pattern="[0-9a-f]{64}" maxlength="64"></label>
+<label>Publisher notes URL<input id="notes_url" required type="url" maxlength="300"></label><label>Publisher notes SHA-256<input id="notes_sha" required pattern="[0-9a-f]{64}" maxlength="64"></label></div>
+<div class="actions"><button type="submit">Read finalized audit</button><button id="copy" type="button" class="secondary">Copy Studio arguments</button><a id="studio" target="_blank" rel="noopener">Open GenLayer Studio ↗</a></div></form>
+<p id="copy-status" class="hint" role="status">To submit, open Run and Debug in Studio, choose <code>audit</code>, paste the six arguments into the corresponding fields, and send with the built-in account.</p><div id="arguments"></div></section>
+<section class="card" aria-labelledby="tracking-heading"><p class="eyebrow">03 / TRANSACTION LIFECYCLE</p><h2 id="tracking-heading">Track a Studio transaction</h2><form id="tracker"><label>Transaction hash<input id="tx-hash" required pattern="0x[0-9a-fA-F]{64}" maxlength="66" placeholder="0x…"></label><div class="actions"><button>Track transaction</button><button id="failed-demo" type="button" class="secondary">Load failed example</button><a id="tx-link" target="_blank" rel="noopener" hidden>Open receipt ↗</a></div></form><p id="tx-status" role="status">Paste the hash returned by Studio.</p></section>
+</main><footer class="shell">ArchiveGap · Disclosure policy v1 · GenLayer Studionet 61999</footer>
+</body></html>

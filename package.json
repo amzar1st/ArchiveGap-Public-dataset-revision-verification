@@ -1,0 +1,29 @@
+{
+  "name": "archivegap",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "python -m unittest discover -s tests && node --test tests/*.test.mjs",
+    "build": "node web/build.mjs",
+    "verify:live": "node tests/verify-live.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amzar1st/ArchiveGap-Public-dataset-revision-verification.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/amzar1st/ArchiveGap-Public-dataset-revision-verification/issues"
+  },
+  "homepage": "https://github.com/amzar1st/ArchiveGap-Public-dataset-revision-verification#readme",
+  "dependencies": {
+    "genlayer-js": "1.1.8"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.7"
+  },
+  "private": true
+}

@@ -1,0 +1,30 @@
+{
+  "repo": "amzar1st/ArchiveGap-Public-dataset-revision-verification",
+  "address": "0x22F674e0005355AB289307d9A746c3E5b510ACbE",
+  "sourceCommit": "153f0290dc8bcf2a5c8d57a143c64ed1be74b62d",
+  "demos": {
+    "gap": {
+      "args": [
+        "https://raw.githubusercontent.com/amzar1st/ArchiveGap-Public-dataset-revision-verification/11290718a697135cf89c377b27a536255a2be65e/fixtures/harbor-city/2025-01.json",
+        "c27946db3d7bbb5d6a2b5decaaa370323519236929bb520eaeba0754da6490f7",
+        "https://raw.githubusercontent.com/amzar1st/ArchiveGap-Public-dataset-revision-verification/11290718a697135cf89c377b27a536255a2be65e/fixtures/harbor-city/2025-02.json",
+        "96a3229f5809e36f4aef2c4223a33f7ef7ec13e4e5f994e59a075b108960f0cb",
+        "https://raw.githubusercontent.com/amzar1st/ArchiveGap-Public-dataset-revision-verification/11290718a697135cf89c377b27a536255a2be65e/fixtures/harbor-city/notes-gap.json",
+        "e5fda082f0fd3c52b6ec03a36d89a1d08b326644a37519a15e43ed3f246ea307"
+      ],
+      "transaction": "0x41af6f4f12b8f1acb8ffadd51ad367c2cfb38276ad2ee263f992e2ca9a119dec"
+    },
+    "disclosed": {
+      "args": [
+        "https://raw.githubusercontent.com/amzar1st/ArchiveGap-Public-dataset-revision-verification/11290718a697135cf89c377b27a536255a2be65e/fixtures/harbor-city/2025-01.json",
+        "c27946db3d7bbb5d6a2b5decaaa370323519236929bb520eaeba0754da6490f7",
+        "https://raw.githubusercontent.com/amzar1st/ArchiveGap-Public-dataset-revision-verification/11290718a697135cf89c377b27a536255a2be65e/fixtures/harbor-city/2025-02.json",
+        "96a3229f5809e36f4aef2c4223a33f7ef7ec13e4e5f994e59a075b108960f0cb",
+        "https://raw.githubusercontent.com/amzar1st/ArchiveGap-Public-dataset-revision-verification/11290718a697135cf89c377b27a536255a2be65e/fixtures/harbor-city/notes-disclosed.json",
+        "11710ab8cb5d7cf8e1b817467a302eda959bf266cd42fcdb2d36f1d2572abcdb"
+      ],
+      "transaction": "0x150de311d9381e9c5964ecb74c8131c3bed53868d91fe0c16ca9b00d565255e9"
+    }
+  },
+  "failedTransaction": "0xd23795bc0f5d433029e8511b7851d8b55924c349f88464cf8dd4c8111c39b8a0"
+}
