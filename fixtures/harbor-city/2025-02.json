@@ -1,0 +1,14 @@
+{
+  "dataset": "harbor-city-daily-pm25",
+  "version": "2025-02",
+  "fields": {
+    "pm25_daily": {"unit": "ug/m3", "method": "Arithmetic mean of the 18 hourly PM2.5 readings between 06:00 and 23:59 local time. The new calculation was applied to all historical rows."},
+    "station": {"unit": "identifier", "method": "Monitoring station code."}
+  },
+  "rows": {
+    "H01/2025-01-01": {"pm25_daily": 14, "station": "H01"},
+    "H01/2025-01-02": {"pm25_daily": 19, "station": "H01"},
+    "H01/2025-01-03": {"pm25_daily": 16, "station": "H01"},
+    "H02/2025-01-01": {"pm25_daily": 11, "station": "H02"}
+  }
+}
