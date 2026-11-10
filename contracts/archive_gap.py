@@ -116,13 +116,17 @@ def classify(diff, notes):
         "For DISCLOSED the notes must name the affected field (or unambiguously identify it), "
         "explain the material change, and specify historical impact when applicable. "
         "Generic corrections are insufficient. Use UNCERTAIN if evidence is ambiguous. "
-        "Return a JSON object keyed by every changed field, with values [classification, quote]. "
+        "Return only a JSON object, without markdown or explanation, keyed by every changed field, with values [classification, quote]. "
         "Quote must be one contiguous verbatim excerpt from the notes for DISCLOSED, "
         "and an empty string for all other classifications. Max 280 characters per quote.\n"
         + canonical({"field_changes": field_changes, "changed_row_ids": historical_rows, "notes": notes})
     )
     try:
-        raw = gl.nondet.exec_prompt(prompt)
+        raw = gl.nondet.exec_prompt(prompt, response_format="json")
+        if type(raw) is str:
+            raw = raw.strip()
+            if raw.startswith("```json\n") and raw.endswith("\n```"):
+                raw = raw[8:-4]
         result = json.loads(raw, object_pairs_hook=unique_object) if type(raw) is str else raw
         require(type(result) is dict and set(result) == set(field_changes), "invalid review fields")
         for status, quote in result.values():
