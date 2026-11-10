@@ -1,0 +1,1 @@
+{"dataset":"harbor-city-daily-pm25","version":"2025-02","notes":"pm25_daily now averages the 18 hourly readings from 06:00 through 23:59 local time instead of all 24 hours. This revised calculation was applied to every historical row; comparisons with the previous export should use the recalculated series."}
